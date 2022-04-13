@@ -1,0 +1,63 @@
+body {
+    background: url('../web/IMAGE/Backgroud/bgr.jpeg');
+    background-size: cover;
+    background-position-y: -80px;
+    font-size: 14px;
+}
+#wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#form-login{
+    max-width: 400px;
+    background: rgba(0, 0, 0, 0.8);
+    flex-grow: 1;
+    padding: 30px 30px 40px;
+    box-shadow: 0px 0px 17px 40px rgba(225, 225, 225, 0.8);
+}
+.form-heading{
+    font-size: 25px;
+    color: #f5f5f5;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.form-group{
+    border-bottom: 1px solid#fff;
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.form-group i {
+    color: #fff;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+.form-input{
+    background: transparent;
+    flex-grow: 1;
+    border: 0;
+    outline: 0;
+    color: #f5f5f5;
+}
+.form-input::placeholder{
+    color: #f5f5f5;
+}
+#eye i{
+    padding-right: 0;
+    cursor: pointer;
+}
+.form-submit{
+    background: transparent;
+    border: 1px solid#f5f5f5;
+    color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    margin-top: 30px;
+}
+.form-submit {
+    border: 1px solid red;
+}

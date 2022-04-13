@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="manage-app.js">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>An CaFe</title>
+</head>
+
+<body>
+    <header>
+        <img src="IMAGE/Backgroud/tungdeal.png" alt="">
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href=""><img style="width: 120px;" src="IMAGE/logo/logoan.jpeg" alt="đây là logo của AN"></a>
+                </li>
+                <li><a href="">Trực Tiếp livestream cùng<br> Sơn TùngMTP<span class="live"><span
+                                class="tream"></span></span></a></li>
+                <li id="adress-form"><a href="index.html">Bắc Ninh<i class="fa fa-sort-desc" aria-hidden="true"></i></a>
+                </li>
+                <li><a href="trangchu.html"><button><i class="fa fa-home" aria-hidden="true"></i>Trang Chủ</button></a>
+                </li>
+                <li><a href=""><button><i class="fa fa-book" aria-hidden="true"></i>Thực Đơn</i></button></a></li>
+                <li><a href="giohang.html"><button><input type="text"
+                                placeholder="Nhập vào đây An sẽ tỳm giúp bạn..."><i class="fa fa-search"
+                                aria-hidden="true"></i></button></a></li>
+                <li><a href="giohang.html"><button><i class="fa fa-shopping-cart" aria-hidden="true"></i>Giỏ
+                            Hàng</button></a></li>
+                <li><a href=""><button><i class="fa fa-bolt" aria-hidden="true"></i>Khuyến Mại</button></a></li>
+                <li><a href="index.html"><button><i class="fa fa-sign-in" aria-hidden="true"></i>Đăng Ký</button></a>
+                </li>
+                <li><a href="dangnhap.html"><button><i class="fa fa-sign-in" aria-hidden="true"></i>Đăng
+                            Nhập</button></a></li>
+                <div class="adress-form">
+                    <div class="adress-form-cotent">
+                        <h2>Chọn Địa Chỉ Quán<span id="adress-close" onmouseenter="this.style.backgroundColor='red'"
+                                onmouseleave="this.style.backgroundColor='gray'">Đóng<i class="fa fa-window-close"
+                                    aria-hidden="true"></i></span></h2>
+                        <form action="">
+                            <p>Chọn địa chỉ quán gần với bạn nhất để được tận hưởng những trải nghiệm tuyệt vời</p>
+                            <select name="">
+                                <option value="#">--Chọn Tỉnh\Thành Phố</option>
+                                <option value="#">Bắc Ninh</option>
+                                <option value="#">Đà Lạt</option>
+                                <option value="#">Hồ Chí Minh</option>
+                            </select>
+                            <select name="">
+                                <option value="#">--Chọn Quận\Huyện</option>
+                                <option value="#">Tp.Bắc Ninh</option>
+                                <option value="#">Tp.Đà Lạt</option>
+                                <option value="#">Thảo Điền.Q2</option>
+                            </select>
+                            <select name="">
+                                <option value="#">--Chọn Quán</option>
+                                <option value="#">AnCafe Bắc Ninh</option>
+                                <option value="#">AnCafe Võ Cường</option>
+                                <option value="#">AnCafe Yên Phong</option>
+                                <option value="#">AnCafe Đền Đô</option>
+                                <option value="#">AnCafe Quy Chế</option>
+                                <option value="#">AnCafe Đà Lạt</option>
+                                <option value="#">AnCafe Thảo Điền</option>
+                            </select>
+                            <input type="text" placeholder="Oder đồ bạn muốn để An ship">
+                            <button id="confrim" onclick="xan()" onmouseenter="this.style.backgroundColor='red'"
+                                onmouseleave="this.style.backgroundColor='gray'">Xác Nhận</button>
+                        </form>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <section class="menu-bar">
+        <div class="container">
+            <div class="menu-bar-content">
+                <ul>
+                    <li><a href="">Cà Phê</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="giohang.html">Cà Phê Hạnh Nhân</a></li>
+                                <li><a href="giohang.html">Cà Phê Cốt Dừa</a></li>
+                                <li><a href="giohang.html">Bạc Xỉu</a></li>
+                                <li><a href="giohang.html">Cà Phê Đá Xay</a></li>
+                                <li><a href="giohang.html">Cà Phê Latte</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Bánh Ngọt</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="giohang.html">Bánh Chuối</a></li>
+                                <li><a href="giohang.html">Bánh Mousse Ca Cao</a></li>
+                                <li><a href="giohang.html">BÁNH MOUSSE ĐÀO</a></li>
+                                <li><a href="giohang.html">BÁNH TIRAMISU</a></li>
+                                <li><a href="giohang.html">BÁNH PHÔ MAI CÀ PHÊ</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Trà</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="giohang.html">Trà An Yên</a></li>
+                                <li><a href="giohang.html">Trà Thơm HAWAI</a></li>
+                                <li><a href="giohang.html">Trà Sen Lá Nếp</a></li>
+                                <li><a href="giohang.html">Trà Dưa Lưới</a></li>
+                                <li><a href="giohang.html">Trà Vải Nha Đam</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Topping</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="giohang.html">Trân Châu Trắng</a></li>
+                                <li><a href="giohang.html">Thạch Cà Phê</a></li>
+                                <li><a href="giohang.html">Thạch Đào</a></li>
+                                <li><a href="giohang.html">Thạch Nha Đam</a></li>
+                                <li><a href="giohang.html">THạch Lá Nếp</a></li>
+                                <li><a href="giohang.html">Trân Châu Đen</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Trà Sữa</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="giohang.html">Trà Thạch Đào</a></li>
+                                <li><a href="giohang.html">Matcha Latte</a></li>
+                                <li><a href="giohang.html">Hồng Trà Kem Sữa</a></li>
+                                <li><a href="giohang.html">Trà Nhài Sữa</a></li>
+                                <li><a href="giohang.html">Gạo Rang Sữa</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div id="slider">
+        <div class="text-content">
+            <h2 class="text-head">
+            </h2>
+            <h2 class="slogan"></h2>
+            <div class="text-dercrion">
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="content-section">
+            <div class="list1" id="list1">Phân Loại Sản Phẩm</div>
+            <div>
+                <ul class="list2">
+                    <li><span class="ti-car" onclick="timall()"> Tất cả sản Phẩm</span></li>
+                    <li><span class="ti-car" onclick="timten('Cà Phê')"> Cà Phê</span></li>
+                    <li><span class="ti-car" onclick="timten('Trà')"> Trà</span></li>
+                    <li><span class="ti-car" onclick="timten('Bánh Ngọt')">Bánh Ngọt</span></li>
+                    <li><span class="ti-car" onclick="timten('Trà Sữa')">Trà Sữa</span></li>
+                    <li><span class="ti-car" onclick="timten('Topping')"> Topping</span></li>
+
+                </ul>
+            </div>
+            <div class="list">Giá</div>
+            <div>
+                <ul class="list3">
+                    <li><span class="ti-rocket" onclick="tim(0, 100000)"> Tất cả</span></li>
+                    <li><span class="ti-rocket" onclick="tim(0, 10000)"> Dưới 10000 Vnđ</span></li>
+                    <li><span class="ti-rocket" onclick="tim(10000,20000)"> Từ 10000 đến 30000 Vnđ</span></li>
+                    <li><span class="ti-rocket" onclick="tim(30000,50000)"> Từ 30000 đến 60000 Vnđ</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="infocar" id="hi">
+            <div>
+                <center>
+                    <p>Thêm sản phẩm</p>
+                    <input type="text" placeholder="Thêm sản phẩm" id="add">
+                    <button onclick="addCar()">Thêm</button>
+                    <p style="margin: 40px;font-size: 30px" id="ha">Hiển thị toàn bộ sản phẩm</p>
+                </center>
+            </div>
+            <table id="displayCar"></table>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span> <br>
+                    Tên <input id="carName"> <br>
+                    ID <input id="carID"> <br>
+                    Giá :Vnđ<input id="carPrice"><br>
+                    Loại <input id="carLoai"> <br>
+                    Nhóm <input id="carNhom"> <br>
+                    <p id="carMedia"></p>
+                    <input type='file' onchange="readURL(this);" id="file1" />
+                    <img id="upload" src="#" alt="your image" /> <br>
+                    <div id="btn"></div>
+                    <br> <br>
+                    <div id="btn1"></div>
+                </div>
+            </div>
+        </div>
+        <div class="abc"></div>
+    </div>
+    <div id="footer">
+        <div class="footer-mid">
+            <br>
+            <div style="font-size: 25px;font-weight: 500">Vũ Văn Hải</div>
+            <hr>
+            <div>SĐT:0865886650</div>
+            <br>
+            <div>Đền đô - Từ Sơn - Bắc Ninh</div>
+            <br>
+            <div>Bank MB: 039596885</div>
+            <br>
+            <div><a href="https://www.google.com/maps/place/AN+caf%C3%A9+%C4%90%E1%BB%81n+%C4%90%C3%B4/@21.1195229,105.9466875,14z/data=!4m9!1m2!2m1!1zQU4gQ8OARQ!3m5!1s0x3135079a08b9a8b3:0x5083c373b21cd310!8m2!3d21.1080011!4d105.958911!15sCgdBTiBDQUZFWgkiB2FuIGNhZmWSAQRjYWZlmgEjQ2haRFNVaE5NRzluUzBWSlEwRm5TVVJIY0V0RU1HSjNFQUU?hl=vi-VN"
+                    class="ti-google">Chỉ Đường</a></div>
+            <br>
+            <div><a href="https://www.facebook.com/ancafedendo" class="ti-facebook"> Facebook</a></div>
+            <br>
+            <div><a href="https://www.instagram.com/ancafe_/?fbclid=IwAR3b1lZjC0_PYGImAZh8AJwJPWlEb876bqDQ4hsPdWcaPZWm_MALQ4obzWs"
+                    class="ti-twitter-alt">instagram</a></div>
+            <hr>
+            <div style="font-size: 20px ;font-weight: 500">COPYRIGHT © 2017 An CaFé CO., LTD. - DESIGN: Nguyên Hoàng
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script>
+
+        class Car {
+            ten;
+            id;
+            gia;
+            anh;
+            loai;
+            nhom;
+
+            constructor(ten, id, gia, anh, loai, nhom) {
+                this.ten = ten;
+                this.id = id;
+                this.gia = gia;
+                this.anh = anh;
+                this.loai = loai;
+                this.nhom = nhom;
+            }
+        }
+
+        let p1 = new Car("Bạc Xỉu", 1, 30000, "https://scontent.fhan4-2.fna.fbcdn.net/v/t39.30808-6/274171099_2230880777068136_2746425252215725384_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=zPYMoPcv7HoAX_aBhjc&_nc_ht=scontent.fhan4-2.fna&oh=00_AT98dozunt58XGStRvQ_9rVFZcXuw4I87-IilFNZc9iwTA&oe=625BE2C8", "Cà Phê", "Đồ Uống");
+        let p2 = new Car("Latte", 2, 35000, "https://scontent.fhan3-2.fna.fbcdn.net/v/t39.30808-6/273449633_2221797444643136_7082984940241898530_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=uazupxnhqZ0AX9WWHJ2&_nc_ht=scontent.fhan3-2.fna&oh=00_AT8xlY8VE03rNjeW6H7DvQE5YTGpZTDOCgR9xRl7t2Wxhw&oe=625BAD4E", "Cà Phê", "Đồ Uống");
+        let p3 = new Car("Cà Phê Hạnh Nhân", 3, 39000, "https://scontent.fhan4-3.fna.fbcdn.net/v/t39.30808-6/255175025_2162583393897875_1799152338769248147_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=-uEjKoaVgbIAX9bNO_g&_nc_ht=scontent.fhan4-3.fna&oh=00_AT-_PAJQpnpUYJ9y01b9pgm5rbcICxtUKKRC9WQROw9k_A&oe=625B72C4", "Cà Phê", "Đồ Uống");
+        let p4 = new Car("Cà Phê Đá Xay", 4, 39000, "https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/.png", "Cà Phê", "Đồ Uống");
+        let p5 = new Car("Trân Châu Hoàng Kim", 5, 5000, "http://file.hstatic.net/1000135323/article/b2_eea954dc5adf4c3ba7ff069000b4bb31.jpg", "Topping", "Topping");
+        let p6 = new Car("Thạch Đào", 6, 5000, "https://cdn.tgdd.vn/Files/2021/09/11/1381983/cach-lam-banh-thach-tra-dao-doc-la-ngon-ngat-ngay-tai-nha-202109112144339899.jpg", "Topping", "Topping");
+        let p7 = new Car("Thạch Lá Nếp", 7, 5000, "https://massageishealthy.com/wp-content/uploads/2017/12/cach-lam-thach-bang-bot-gelatin-1.jpg", "Topping", "Topping");
+        let p8 = new Car("Thạch Cà Phê", 8, 5000, "https://static.unica.vn/media/imagesck/1627931027_cach-lam-thach-rau-cau-trai-cay-1.jpg?v=1627931027", "Topping", "Topping");
+        let p9 = new Car("Trân Châu", 9, 5000, "https://reviewaz.vn/storage/cach-lam-tran-chau-1.jpg", "Topping", "Topping");
+        let p10 = new Car("Trà An Yên", 10, 32000, "https://scontent.fhan5-4.fna.fbcdn.net/v/t39.30808-6/260057434_2163597293796485_6354334514329401911_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=O55EIwWi2w8AX-vXsYS&_nc_ht=scontent.fhan5-4.fna&oh=00_AT8WDOitPMIk1fW9G5DNrMvavgFdO9zBCy2Z_F3K62odug&oe=6259BCCF", "Trà", "Đồ Uống");
+        let p11 = new Car("Trà Dưa Lưới", 11, 28000, "https://scontent.fhan3-3.fna.fbcdn.net/v/t39.30808-6/250796593_2154373394718875_5495169597404661802_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=NAPfDerE66oAX-Ri5y2&_nc_ht=scontent.fhan3-3.fna&oh=00_AT_52lM6-GFAiQxcry4yqwrE_L1OtPP0i6wpaabXxHY0Pw&oe=625AB213", "Trà", "Đồ Uống");
+        let p12 = new Car("Trà Sen Lá Nếp ", 12, 32000, "https://scontent.fhan5-6.fna.fbcdn.net/v/t39.30808-6/253242022_2148834008606147_6950094801639591613_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=a26aad&_nc_ohc=VUYS0_R8764AX_onjay&tn=FJ9BHEkZs88gTeCz&_nc_ht=scontent.fhan5-6.fna&oh=00_AT-vHLkRjjqGNyN3gW-tmEDgOUMTPpADsjjmSqzo6STXzA&oe=625A82EF", "Trà", "Đồ Uống");
+        let p13 = new Car("Trà Vải Nha Đam", 13, 28000, "https://scontent.fhan4-3.fna.fbcdn.net/v/t1.6435-9/162033271_1965742173581999_6426068253101485297_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=U2kPEXuITf8AX-o6FGW&tn=FJ9BHEkZs88gTeCz&_nc_ht=scontent.fhan4-3.fna&oh=00_AT9m3XZw3GevWTZ_y3LO1SAmqNhO_rfAlEcUj6V_V1l_HA&oe=627B9810", "Trà", "Đồ Uống");
+        let p14 = new Car("Trà Thơm Hawai", 14, 25000, "https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/240511986_2108381742651374_4874567342926139200_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=mPmsHr4glxcAX-wPsMF&_nc_ht=scontent.fhan5-9.fna&oh=00_AT8XBr7fOAW_VvXMLwDRvpQicPglrj8_YnmMbLqZS82kgA&oe=625B23B5", "Trà", "Đồ Uống");
+        let p15 = new Car("Trà Nhài Nha Đam", 15, 25000, "https://scontent.fhan4-3.fna.fbcdn.net/v/t39.30808-6/240191432_2088408724648676_4058330354724528642_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=WAMeHHakz8EAX_aZCwn&_nc_ht=scontent.fhan4-3.fna&oh=00_AT-CKX7l3SeD3Ek2_2FJgGLNVJpgR046NZSuqspY9KIQ_A&oe=625B71A1", "Trà", "Đồ Uống");
+        let p16 = new Car("Trà Thạch Đào", 16, 30000, "https://scontent.fhan3-3.fna.fbcdn.net/v/t39.30808-6/256025786_2156114381211443_7444339727097499672_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=bNSnBtzwn3IAX9SPz_8&_nc_ht=scontent.fhan3-3.fna&oh=00_AT93cTLvyeTXQ-Oe9Wn6izlq-utFlWeNFQt8Nlhk4bmtFQ&oe=625BA287", "Trà Sữa", "Đồ Uống");
+        let p17 = new Car("MatCha Latte", 17, 30000, "https://scontent.fhan5-11.fna.fbcdn.net/v/t39.30808-6/240525289_2094711344018414_7475931796647724706_n.jpg?_nc_cat=111&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=TXj4usffV1AAX_IDy3m&tn=FJ9BHEkZs88gTeCz&_nc_ht=scontent.fhan5-11.fna&oh=00_AT_bfYgchwehMKtonqqtMJKrDCc3MOf1RcAsSA_6c2Ez3g&oe=625AD96B", "Trà Sữa", "Đồ Uống");
+        let p18 = new Car("Hồng Trà Kem Sữa", 18, 25000, "http://nguyenlieuphache.com.vn/upload/congthuc/olong-milk-foam1.jpg", "Trà Sữa", "Đồ Uống");
+        let p19 = new Car("Sữa Tươi Trân Châu Đườn Đen", 19, 28000, "https://cdn.cet.edu.vn/wp-content/uploads/2020/02/sua-tuoi-tran-chau-duong-den.jpg", "Trà Sữa", "Đồ Uống");
+        let p20 = new Car("Trà Gạo Sữa", 20, 25000, "https://photo.famicook.com/image/tra-sua-gao-rang-i3090-640w.jpg", "Trà Sữa", "Đồ Uống");
+        let p21 = new Car("Bánh Phô Mai Ca Cao", 21, 18000, "https://cdn.tgdd.vn/2021/03/CookRecipe/Avatar/banh-kem-pho-mai-chay-basque-burnt-cheese-thumbnail.jpg", "Bánh Ngọt", "Topping");
+        let p22 = new Car("Bánh Tiramisu Matcha", 22, 18000, "https://www.justonecookbook.com/wp-content/uploads/2019/11/Matcha-Tiramisu-6408-I-1.jpg", "Bánh Ngọt", "Topping");
+        let p23 = new Car("Bánh Mosse Đào", 23, 18000, "data:image/jpeg;base64,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", "Bánh Ngọt", "Topping");
+        let p24 = new Car("Bánh Chuối", 24, 18000, "https://cdn.daylambanh.edu.vn/wp-content/uploads/2019/04/banh-chuoi-nuong-la-mieng-600x400.jpg", "Bánh Ngọt", "Topping");
+        let p25 = new Car("Bánh Mosse Ca Cao", 25, 18000, "https://banhkemvungtau.com/wp-content/uploads/2020/07/mousse-chocolatetiemW2zItG.jpg", "Bánh Ngọt", "Topping");
+        let listCar = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16, p17, p18, p19, p20, p21 , p22, p23, p24, p25];
+        let currentCar = [];
+
+        function displayAll(listCar) {
+            currentCar = listCar;
+            let car = '<tr>\n' +
+                '<td width="30%" >Name</td>\n' +
+                '<td width="10%">Mã số</td>\n' +
+                '<td width="20%">Hình ảnh</td><br>' +
+                '<td width="20%"></td> <br>' +
+                '<td width="20%" style="float: left">' + listCar.length + 'sản phẩm</td> <br>' +
+                '</tr>'
+            for (let i = 0; i < listCar.length; i++) {
+                car += '<tr><td>' + listCar[i].ten + '</td>' +
+                    '<td>' + listCar[i].id + '</td>' +
+                    '<td> <img width="100%" height="130px" src=" ' + listCar[i].anh + '"></td>' +
+                    '<td><button class="btn-them" onclick="Edit(' + i + ')">Thông tin' +
+                    '</button></td>' +
+                    '<td><button class="btn-xoa" onclick="Delete(' + i + ')">Xóa</button></td></tr>'
+            }
+            document.getElementById('displayCar').innerHTML = car;
+        }
+
+        displayAll(listCar);
+        let str = document.getElementById('add');
+
+        function addCar() {
+
+            let stt = parseInt(Math.random() * 20);
+            let rdgia = parseInt(Math.random() * 30000);
+            if (str.value == '') {
+                alert('Tên sản phẩm không để trống')
+            } else {
+                let newstr = str.value[0].toUpperCase() + str.value.slice(1);
+                listCar.push({
+                    ten: newstr,
+                    id: stt,
+                    gia: rdgia,
+                    image: '',
+                    loai: '',
+                    nhom: '',
+                })
+                alert("Bạn đã thêm thành công " + str.value);
+                displayAll(listCar);
+            }
+            str.value = '';
+            // localStorage.setItem('ListCar', JSON.stringify(listCar));
+        }
+
+        let modal = document.getElementById('myModal');
+        let span = document.getElementsByClassName('close')[0];
+        let carName = document.getElementById('carName');
+        let carID = document.getElementById('carID');
+        let carPrice = document.getElementById('carPrice');
+        let carMedia = document.getElementById('carMedia');
+        let carLoai = document.getElementById('carLoai');
+        let carNhom = document.getElementById('carNhom');
+
+        function Edit(index) {
+            modal.style.display = 'block';
+            span.onclick = function () {
+                modal.style.display = 'none';
+            }
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+            carName.value = currentCar[index].ten;
+            carID.value = currentCar[index].id;
+            carPrice.value = currentCar[index].gia;
+            carLoai.value = currentCar[index].loai;
+            carNhom.value = currentCar[index].nhom;
+            carMedia.innerHTML = '<img width="100%" src="' + currentCar[index].anh + '">';
+            document.getElementById('btn').innerHTML = '<button onclick="Update(' + index + ')" class="btn-edit">Sửa</button>' + ' ' + '<button onclick="Huy()" class="btn-edit">Hủy</button>';
+            document.getElementById('upload').src = "";
+        }
+        function Huy() {
+            modal.style.display = 'none';
+        }
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                let reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#upload')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        function Update(index) {
+            if (confirm('Bạn có muốn sửa ' + currentCar[index].ten + ' không')) {
+                alert("Bạn đã sửa thành công " + currentCar[index].ten);
+                currentCar[index].ten = carName.value;
+                currentCar[index].id = carID.value;
+                currentCar[index].gia = carPrice.value;
+                currentCar[index].mau = carLoai.value;
+                currentCar[index].nhom = carNhom.value;
+                currentCar[index].anh = document.getElementById('upload').src;
+                modal.style.display = 'none';
+            }
+            displayAll(listCar);
+        }
+
+        function Delete(index) {
+            if (confirm("Bạn có muốn xóa " + currentCar[index].ten + " không")) {
+                alert("Bạn đã xóa thành công " + currentCar[index].ten);
+                currentCar.splice(index, 1);
+            }
+            displayAll(currentCar);
+        }
+
+        function timall() {
+            displayAll(listCar);
+        }
+
+        function timten(k) {
+            let arr = [];
+            for (let i = 0; i < listCar.length; i++) {
+                if (listCar[i].loai == k) {
+                    arr.push(listCar[i]);
+                }
+            }
+            displayAll(arr);
+        }
+
+        function tim(from, to) {
+            let arr = [];
+            for (let i = 0; i < listCar.length; i++) {
+                if (listCar[i].gia >= from && listCar[i].gia <= to) {
+                    arr.push(listCar[i]);
+                }
+            }
+            displayAll(arr);
+        }
+
+
+    </script>
+</body>
+
+</html>

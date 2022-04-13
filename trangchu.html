@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>An CaFe</title>
+</head>
+
+<body>
+    <header>
+        <img src="IMAGE/Backgroud/tungdeal.png" alt="">
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href=""><img style="width: 120px;" src="IMAGE/logo/logoan.jpeg" alt="đây là logo của AN"></a>
+                </li>
+                <li><a href="">Trực Tiếp livestream cùng<br> Sơn TùngMTP<span class="live"><span
+                                class="tream"></span></span></a></li>
+                <li id="adress-form"><a href="index.html"><button>Bắc Ninh<i class="fa fa-sort-desc"
+                                aria-hidden="true"></i></button></a></li>
+                <li><a href=""><button><i class="fa fa-home" aria-hidden="true"></i>Trang Chủ</button></a></li>
+                <li><a href="menu.html"><button><i class="fa fa-book" aria-hidden="true"></i>Thực Đơn</i></button></a></li>
+                <li><a href="giohang.html"><input type="text" placeholder="Nhập vào đây An sẽ tỳm giúp bạn..."><i class="fa fa-search"
+                        aria-hidden="true"></i></a></li>
+                <li><a href="giohang.html"><button><i class="fa fa-shopping-cart" aria-hidden="true"></i>Giỏ
+                            Hàng</button></a></li>
+                <li><a href=""><button><i class="fa fa-bolt" aria-hidden="true"></i>Khuyến Mại</button></a></li>
+                <li><a href="dangky.html"><button><i class="fa fa-sign-in" aria-hidden="true"></i>Đăng Ký</button></a>
+                </li>
+                <li><a href="dangnhap.html"><button><i class="fa fa-sign-in" aria-hidden="true"></i>Đăng
+                            Nhập</button></a></li>
+                <div class="adress-form">
+                    <div class="adress-form-cotent">
+                        <h2>Chọn Địa Chỉ Quán<span id="adress-close" onmouseenter="this.style.backgroundColor='red'"
+                                onmouseleave="this.style.backgroundColor='gray'">Đóng<i class="fa fa-window-close"
+                                    aria-hidden="true"></i></span></h2>
+                        <form action="">
+                            <p>Chọn địa chỉ quán gần với bạn nhất để được tận hưởng những trải nghiệm tuyệt vời</p>
+                            <select name="">
+                                <option value="#">--Chọn Tỉnh\Thành Phố</option>
+                                <option value="#">Bắc Ninh</option>
+                                <option value="#">Đà Lạt</option>
+                                <option value="#">Hồ Chí Minh</option>
+                            </select>
+                            <select name="">
+                                <option value="#">--Chọn Quận\Huyện</option>
+                                <option value="#">Tp.Bắc Ninh</option>
+                                <option value="#">Tp.Đà Lạt</option>
+                                <option value="#">Thảo Điền.Q2</option>
+                            </select>
+                            <select name="">
+                                <option value="#">--Chọn Quán</option>
+                                <option value="#">AnCafe Bắc Ninh</option>
+                                <option value="#">AnCafe Võ Cường</option>
+                                <option value="#">AnCafe Yên Phong</option>
+                                <option value="#">AnCafe Đền Đô</option>
+                                <option value="#">AnCafe Quy Chế</option>
+                                <option value="#">AnCafe Đà Lạt</option>
+                                <option value="#">AnCafe Thảo Điền</option>
+                            </select>
+                            <input type="text" placeholder="Oder đồ bạn muốn để An ship">
+                            <button id="confrim" onclick="xan()" onmouseenter="this.style.backgroundColor='red'"
+                                onmouseleave="this.style.backgroundColor='gray'">Xác Nhận</button>
+                        </form>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <section class="menu-bar">
+        <div class="container">
+            <div class="menu-bar-content">
+                <ul>
+                    <li><a href="">Cà Phê</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="giohang.html">Cà Phê Hạnh Nhân</a></li>
+                                <li><a href="giohang.html">Cà Phê Cốt Dừa</a></li>
+                                <li><a href="giohang.html">Bạc Xỉu</a></li>
+                                <li><a href="giohang.html">Cà Phê Đá Xay</a></li>
+                                <li><a href="giohang.html">Cà Phê Latte</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Bánh Ngọt</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="giohang.html">Bánh Chuối</a></li>
+                                <li><a href="giohang.html">Bánh Mousse Ca Cao</a></li>
+                                <li><a href="giohang.html">BÁNH MOUSSE ĐÀO</a></li>
+                                <li><a href="giohang.html">BÁNH TIRAMISU</a></li>
+                                <li><a href="giohang.html">BÁNH PHÔ MAI CÀ PHÊ</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Trà</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="giohang.html">Trà An Yên</a></li>
+                                <li><a href="giohang.html">Trà Thơm HAWAI</a></li>
+                                <li><a href="giohang.html">Trà Sen Lá Nếp</a></li>
+                                <li><a href="giohang.html">Trà Dưa Lưới</a></li>
+                                <li><a href="giohang.html">Trà Vải Nha Đam</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Topping</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="giohang.html">Trân Châu Trắng</a></li>
+                                <li><a href="giohang.html">Thạch Cà Phê</a></li>
+                                <li><a href="giohang.html">Thạch Đào</a></li>
+                                <li><a href="giohang.html">Thạch Nha Đam</a></li>
+                                <li><a href="giohang.html">THạch Lá Nếp</a></li>
+                                <li><a href="giohang.html">Trân Châu Đen</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="">Trà Sữa</a>
+                        <div class="submenu">
+                            <ul>
+                                <li><a href="giohang.html">Trà Thạch Đào</a></li>
+                                <li><a href="giohang.html">Matcha Latte</a></li>
+                                <li><a href="giohang.html">Hồng Trà Kem Sữa</a></li>
+                                <li><a href="giohang.html">Trà Nhài Sữa</a></li>
+                                <li><a href="giohang.html">Gạo Rang Sữa</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!--....................................Slider............................-->
+    <div class="slide">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="IMAGE/slide/slide1.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="IMAGE/slide/slide2.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="IMAGE/slide/slide3.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="IMAGE/slide/slide4.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="IMAGE/slide/slide5.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="IMAGE/slide/slide6.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="IMAGE/slide/slide7.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="IMAGE/slide/slide8.jpeg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="IMAGE/slide/slide9.jpeg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-box" id="about">
+                <h2>VỀ CHÚNG TÔI</h2>
+                <ul>
+                    <li>
+                        <p>An CaFe® được sinh ra từ niềm đam mê bất tận với hạt cà phê Việt Nam. Qua một chặng đường
+                            dài, chúng tôi đã không ngừng mang đến những sản phẩm cà phê thơm ngon, sánh đượm trong
+                            không gian thoải mái và lịch sự với mức giá hợp lý. Những ly cà phê của chúng tôi không chỉ
+                            đơn thuần là thức uống quen thuộc mà còn mang trên mình một sứ mệnh văn hóa phản ánh một
+                            phần nếp sống hiện đại của người Việt Nam.</p>
+                        <p>Chúng tôi mong muốn mang đến cho bạn những trải nghiệm đáng nhớ mỗi lần đến An CaFe®. Hãy
+                            chia sẻ với chúng tôi để chúng tôi có thể mang đến cho bạn những trải nghiệm tuyệt vời hơn
+                            thế.</p>
+                    </li>
+                    <li>
+                        <button class="contact">Liên Hệ Ngay</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h2>THÔNG TIN LIÊN HỆ</h2>
+                <ul>
+                    <li>
+                        <div class="icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        Đền Đô - Tp.Từ Sơn - Bắc Ninh
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <ion-icon name="call-outline"></ion-icon>
+                        </div>
+                        0395968885
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+                        nguyenhoang24091995@gmail.com
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h2>ĐĂNG KÝ</h2>
+                <ul>
+                    <li>
+                        <form action="">
+                            <input type="text" placeholder="Nhập Email" id="email">
+                            <button> Nhận Thông Báo</button>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="INDEX.JS"></script>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+</html>

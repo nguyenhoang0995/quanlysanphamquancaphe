@@ -1,0 +1,468 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul {
+    list-style: none;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+header {
+    background-color: #F7F7F7;
+    text-align: center;
+}
+/*..............................nav............... */
+nav {
+    background-color: #F7F7F7;
+}
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul li a {
+    color: black;
+    font-size: 18px;
+}
+nav ul li:nth-child(2) a {
+    color: black;
+}
+nav ul li:nth-child(2) i {
+    color: white;
+    font-size: 18px;
+    margin-left: 10px;
+}
+.live {
+    position: relative;
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    background-color: red;
+    display: block;
+    float: right;
+    margin-right: 2px;
+}
+.tream {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-color:red;
+    display: block;
+    pointer-events: none;
+    animation: livetream 2s linear infinite;
+}
+@keyframes livetream {
+    from {
+        opacity: 0.4;
+    }
+     to {
+            transform: scale(3);
+            opacity: 0;
+        }
+}
+nav ul li:nth-child(3) a {
+    color: black;
+}
+nav ul li:nth-child(3) i {
+    color: black;
+    font-size: 18px;
+    margin-left: 6px;
+}
+nav ul li:nth-child(4) button {
+    color: black;
+    height: 40px;
+    padding:0 12px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #B3282F;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+nav ul li:nth-child(4) button i {
+    margin-right: 6px;
+}
+nav ul li:nth-child(4) button:hover {
+    background-color: white;
+}
+nav ul li:nth-child(5) button {
+    color: black;
+    height: 40px;
+    padding:0 12px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #B3282F;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+nav ul li:nth-child(5) button i {
+    margin-right: 6px;
+}
+nav ul li:nth-child(5) button:hover {
+    background-color: white;
+}
+nav ul li:nth-child(6) {
+    position: relative;
+}
+nav ul li:nth-child(6) input{
+    height: 40px;
+    width: 300px;
+    border-radius: 25px;
+    border: none;
+    padding-left: 6px;
+    outline: none;
+    background-color: #fff;
+    border: 3px solid #B3282F;
+}
+nav ul li:nth-child(6) i {
+    position: absolute;
+    font-size: 20px;
+    right: 10px;
+    line-height: 40px;
+}
+nav ul li:nth-child(7) button {
+    color: black;
+    height: 40px;
+    padding:0 12px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #B3282F;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+nav ul li:nth-child(7) button i {
+    margin-right: 6px;
+}
+nav ul li:nth-child(7) button:hover {
+    background-color: white;
+}
+nav ul li:nth-child(8) button {
+    position: relatives;
+    color: black;
+    height: 40px;
+    padding:0 12px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #B3282F;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+nav ul li:nth-child(8) button i {
+    margin-right: 6px;
+}
+nav ul li:nth-child(8) button:hover {
+    background-color: white;
+}
+nav ul li:nth-child(9) button {
+    color: black;
+    height: 40px;
+    padding:0 12px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #B3282F;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+nav ul li:nth-child(9) button i {
+    margin-right: 6px;
+}
+nav ul li:nth-child(9) button:hover {
+    background-color: white;
+}
+nav ul li:nth-child(10) button {
+    color: black;
+    height: 40px;
+    padding:0 12px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid #B3282F;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+nav ul li:nth-child(10) button i {
+    margin-right: 6px;
+}
+nav ul li:nth-child(10) button:hover {
+    background-color: white;
+}
+/*--------------------menu-bar------------------*/
+.menu-bar{
+    background-color:#F7F7F7;
+}
+.menu-bar ul {
+    display: flex;
+    justify-content: space-between; 
+}
+.menu-bar ul li a{
+    color: black;
+    font-size: 20px;
+}
+.menu-bar ul li a i{
+    margin-right: 6px;
+    font-size: 20px;
+}
+.menu-bar > ul > li{
+    padding: 15px 6px;
+    transition: all 0.3 ease;
+}
+.menu-bar ul li:hover{
+    background-color:rgb(176,216,240) ;
+}
+/*-----------adress-fomr--------*/
+.adress-form {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0,0.6);
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #333;
+    display: none;
+    z-index: 999;
+}
+.adress-form-cotent {
+    width: 450px;
+    height: 450px;
+    background-color:#CAEEF9;
+    border-radius: 5px;
+}
+.adress-form-cotent form {
+    padding: 12 40px;
+}
+.adress-form-cotent h2 {
+    font-size: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+.adress-form-cotent h2 span {
+    display: block;
+    position: absolute;
+    height: 30px;
+    padding: 0 6px;
+    border: 1px solid #B3282F;
+    right: 12px;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 30px;
+    color: #333;
+    border-radius: 5px;
+}
+.adress-form-cotent form p 
+{
+    font-size: 16px;
+}
+.adress-form-cotent form input,select {
+    height: 45px;
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    padding: 6px;
+    border-radius: 5px;
+}
+.adress-form-cotent form button {
+    margin-top: 20px;
+    height: 40px;
+    width: 80px;
+    cursor: pointer;
+    background-color: #B3282F;
+    outline: none;
+    border: none;
+    color: #fff;
+}
+/* Content */
+
+
+content .container {
+    width: 100%;
+    
+    padding: 0;
+    height: 700px;
+    margin-top:50px;
+    text-align: center;
+}
+content .container .title {
+    text-transform:uppercase;
+    margin-bottom:30px;
+    margin-top:30px;
+}
+content .container #list-common {
+    width: 1300px;
+    height: 500px;
+    margin:0px auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+content .container #list-common .item {
+    width: 350px;
+    height: 500px;
+    background:#016341;
+    position:relative;
+}
+
+content .container #list-common .item .circle {
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    margin:0px auto;
+    margin-top:30px;
+    overflow: hidden;
+    animation :animate 20s infinite linear;
+}
+@keyframes animate {
+    0%{
+        transform:rotate(0deg);
+    }
+    50%{
+        transform:rotate(360deg);
+    }
+    100%{
+        transform:rotate(0deg);
+    }
+    
+}
+content .container #list-common .item {
+    overflow: hidden;
+}
+content .container #list-common .item .circle img {
+    max-width: 95%;
+    text-align: center;
+    transition:all 0.5s;
+}
+content .container #list-common .item .circle:hover img {
+    transform:scale(1.5);
+    
+}
+
+content .container #list-common .item .name {
+    width: 200px;
+    height: 40px;
+    background:green;
+    margin:0px auto;
+    margin-top:40px;
+    line-height: 40px;
+    color:#fff;
+    background:transparent;
+    border:2px solid #fff;
+    position:relative;
+}
+content .container #list-common .item .name:before {
+    content :"";
+    position:absolute;
+    border-top:4px solid #CF181B;
+    border-left:4px solid #CF181B;
+    width: 10px;
+    height: 10px;
+    left:-3px;
+    top:-3px;
+    transition:all 0.4s;
+}
+
+content .container #list-common .item .name:hover:before {
+    width: 100%;
+    height: 100%;
+}
+content .container #list-common .item .name:after {
+    content :"";
+    position:absolute;
+    border-right:4px solid #CF181B;
+    border-bottom:4px solid #CF181B;
+    width: 10px;
+    height: 10px;
+    right:-3px;
+    bottom:-3px;
+    transition:all 0.4s;
+}
+content  #list-common .item .name:hover:after {
+    width: 100%;
+    height: 100%;
+}
+content  #list-common .item .intro {
+    padding:10px;
+    color:#fff;
+}
+content  #list-common .item .intro {
+    padding:10px 20px;
+}
+
+content .container #list-common .item .book {
+    width: 100px;
+    height: 40px;
+    background:transparent;
+    border:1px solid #fff;
+    margin-top:20px;
+    color:#B3282F;
+    transition:all 0.5s;
+    position: absolute;
+    bottom:-100px;
+    transform:translate(-50%,-50%);
+}
+content .container #list-common .item .book:hover {
+    background: #F7F7F7;
+    
+}
+content .container #list-common .item:hover .book {
+    bottom:0px;
+}
+/* done */
+
+/*-------------------------------------submenu----------------------------------*/
+.menu-bar-content ul li {
+    position: relative;
+}
+.submenu {
+    position: absolute;
+    background-color: #f0ede8;
+    width: 200px;
+    height: auto;
+    left: 0;
+    top: 100%;
+    padding: 12px;
+    display: none;
+    z-index: 110;
+}
+.submenu ul {
+    display: flex;
+    flex-direction: column;
+}
+.submenu ul li{
+    padding: 6px 0;
+}
+.submenu >ul >li >a{
+    color: black;
+}
+.submenu ul li:hover a{
+    color: #CF181B;
+}
+.submenu ul li:hover {
+    background: none;
+}
+.menu-bar-content ul li:hover .submenu{
+    display: block;
+}
+/*----------slider--------------*/
+.carousel-inner img{
+    display: block;
+    width: 200px;
+    height: 800px;
+}

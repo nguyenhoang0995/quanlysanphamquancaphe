@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="giohang1.css">
+    <link rel="stylesheet" href="giohang.js">
+    <link rel="stylesheet" href="giohang.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <title>Giỏ Hàng</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+
+            <div class="img-nav">
+                <a href="bacninh.html"><img style="width: 200px; height: 120px;" src="IMAGE/logo/logoan.jpeg"
+                        alt="đây là logo của AN"></a>
+            </div>
+            </div>
+            <div class="content-nav">
+                <ul>
+                    <li><a href="trangchu.html">Trang Chủ</a></li>
+                    <li><a href="menu.html">Thực Đơn</a></li>
+                </ul>
+                <form>
+                    <input type="text" name="search" placeholder="Tìm kiếm sản phẩm..." />
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </form>
+            </div>
+            <!-- The Modal -->
+            <button id="cart">
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                Giỏ Hàng
+            </button>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title">Giỏ Hàng</h3>
+                        <span class="close">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price">VNĐ</span>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                        <a href="bacninh.html"><button type="button" class="btn btn-primary order">Thanh
+                                Toán</button></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+    <!-- content -->
+    <section class="wrapper">
+        <div class="products">
+            <ul>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://khamphamonngon.com/wp-content/uploads/2016/06/19-banh-mochi-tra-xanh.png"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Bánh Mochi Trà Xanh </h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">39.000 đ</span>
+                            </div>
+                            <button type="button" class=" btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://scontent.fhan5-4.fna.fbcdn.net/v/t45.5328-4/93433110_3380523085310645_4680054231263084544_n.jpg?stp=dst-jpg_p640x640&_nc_cat=104&ccb=1-5&_nc_sid=c48759&_nc_ohc=KfKtA7mrHmsAX8bUsmO&_nc_ht=scontent.fhan5-4.fna&oh=00_AT-2pcCkiNgbNL0CjysvthEpXoMgmN9q1-xHEDQuIY0aTA&oe=625931E5"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Bạc Xỉu</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">28.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://scontent.fhan5-11.fna.fbcdn.net/v/t45.5328-4/93716654_3021837504505155_5455397601736130560_n.jpg?stp=dst-jpg_s960x960&_nc_cat=103&ccb=1-5&_nc_sid=c48759&_nc_ohc=_ShTETbl7WMAX-N8Ymc&_nc_ht=scontent.fhan5-11.fna&oh=00_AT-EeP_Ui3h4XjRiAfnDKXldS8dY8QCiAiNHBW5BDxxTJQ&oe=62588151"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Cà Phê Cốt Dừa</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">39.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://scontent.fhan5-5.fna.fbcdn.net/v/t45.5328-4/93305948_4441609579198519_2859131257608994816_n.jpg?stp=dst-jpg_p640x640&_nc_cat=107&ccb=1-5&_nc_sid=c48759&_nc_ohc=_oH2aOhCp9YAX_xv5BD&_nc_ht=scontent.fhan5-5.fna&oh=00_AT--bI9LHmm-yxGU3-mYAni1JMGQwVMDfAoGIXmryv9aDg&oe=6258C0FC"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Cà Phê Latte</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">39.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNnzLKdf9_NtDXRRx1us7sN313r2EcM7BDRA&usqp=CAU"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Cà Phê Đá Xay</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">39.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="http://www.taycoffee.com/public/media/files/ca-phe-caramel-macchiato-tay-s-coffee-3.jpg"alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Caramel Machiato</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">39.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://scontent.fhan5-4.fna.fbcdn.net/v/t45.5328-4/93570809_1629752030482325_3005343317438234624_n.jpg?stp=dst-jpg_s960x960&_nc_cat=104&ccb=1-5&_nc_sid=c48759&_nc_ohc=8ujU1J-__tQAX-KeOAR&_nc_ht=scontent.fhan5-4.fna&oh=00_AT_D1MDU7zbMJwiwx-fy5aeonDapmJCfjR71DbLBfBcoiw&oe=6259A1DE"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Trà Thạch Đào</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">28.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://scontent.fhan5-4.fna.fbcdn.net/v/t45.5328-4/92963020_2515542645212866_3307618206583095296_n.jpg?stp=dst-jpg_s960x960&_nc_cat=104&ccb=1-5&_nc_sid=c48759&_nc_ohc=13TDSDt3vI8AX_2gs8c&_nc_ht=scontent.fhan5-4.fna&oh=00_AT_Zfsugo49669pMhxofseWx9fW_e6vFZOBqOEs43IjJFw&oe=62585AC0"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Caramel Machat Cốt Dừa</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">39.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://scontent.fhan5-9.fna.fbcdn.net/v/t39.30808-6/261337838_2172345019588379_464947625137160961_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=JeqYp-5mbjAAX-N1M27&_nc_ht=scontent.fhan5-9.fna&oh=00_AT8GXjFbmKRyOlnymcNZK6FhN7M177CX2bGV-FVLG5g4cg&oe=6259BF15"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Trà Sen Lá Nếp</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">39.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://cdn01.diadiemanuong.com/ddau/640x/quen-di-tra-sua-thu-lien-6-quan-tra-trai-cay-tuoi-ngon-gay-nghien-dien-rong-f60d3ec1636682866597161474.jpg"alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Trà Dưa Lưới</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">28.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://cdn.eva.vn/upload/2-2020/images/2020-05-14/vai-vao-mua-nhanh-tay-lam-tra-thach-vai-thom-ngon-tuoi-mat-thuong-thuc-nao-96241904_4283001965104900_245012100231987200_o-1589428404-757-width700height490.jpg"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Trà Thạch Vải</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">39.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://scontent.fhan5-9.fna.fbcdn.net/v/t45.5328-4/93329227_3798995660172232_4550194640938074112_n.jpg?stp=dst-jpg_s960x960&_nc_cat=110&ccb=1-5&_nc_sid=c48759&_nc_ohc=tzuCfiNklM4AX-F8vxv&_nc_ht=scontent.fhan5-9.fna&oh=00_AT9eAZJ3VSDXugPxeSX1aLoenvv5GCcvG89H1Vjne4IG5A&oe=625AB3F3"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Trà Thơm HAWAI</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">28.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://scontent.fhan5-8.fna.fbcdn.net/v/t39.30808-6/269926991_2187844444705103_2343342192066549967_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=1VsEeihPGhUAX9q2Taf&_nc_ht=scontent.fhan5-8.fna&oh=00_AT95q1ZI1tAaEAdEQQzD6Vv6C1I1sHeKLJBDsXGJf-TXFA&oe=6259EE59"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Bánh MOUSSE Ca Cao</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">28.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://scontent.fhan5-5.fna.fbcdn.net/v/t39.30808-6/258591074_2162583353897879_4395626082572962443_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=bU94G76u37YAX9KTxP3&_nc_ht=scontent.fhan5-5.fna&oh=00_AT9nVqFdl1VJpOogFVVDguZuV_sbjjQtPgro135CQtFxHw&oe=625AB97B"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Bánh Phô Mai Cà Phê</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">28.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://meta.vn/Data/image/2021/08/19/cach-lam-banh-chuoi-nuong-bang-noi-com-dien-3.jpg"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Bánh Chuối</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">28.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://kenh14cdn.com/2017/sanpham2-1502193234263-0-91-709-1276-crop-1502193613338.png"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3"></h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">28.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://phonghopamway.com.vn/cach-lam-thach-ca-phe/imager_1_31576_700.jpg" alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Thạch Cà Phê</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">5.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://kaizenco.vn/wp-content/uploads/2021/07/thachnhadam12-2-2048x1365.jpg" alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Thạch Nha Đam</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">5.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://s.meta.com.vn/img/thumb.ashx/Data/image/2021/05/28/cach-lam-thach-dao-rau-cau-dao-10.jpg"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Thạch Đào</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">5.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product no-margin">
+                    <div class="img-product">
+                        <img class="img-prd" src="https://smoothiedays.com/wp-content/uploads/2021/03/thach-la-nep.png"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Thạch Lá Nếp</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">5.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="data:image/jpeg;base64,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"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Trân Châu Trắng</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">5.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://scontent.fhan5-6.fna.fbcdn.net/v/t1.6435-9/146721389_1927946857361531_2895470123292784870_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=HU8Sgqtc4ooAX-sRLvc&_nc_ht=scontent.fhan5-6.fna&oh=00_AT9-vLh9DW0zdQgy014X2ALjGuDQcPvS6GVP2h0Yu199NQ&oe=627C72E0"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Matcha Latte</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">28.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Dặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://cdn.cet.edu.vn/wp-content/uploads/2020/02/sua-tuoi-tran-chau-duong-den.jpg"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Trà Sữa Tưới Chân Trâu Đường Đen</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">28.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Dặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd" src="https://file.hstatic.net/1000135323/article/hong_tra_kem_man.jpg"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Hồng Trà Kem Sữa</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">28.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Dặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd" src="https://cdn.tgdd.vn/2020/07/CookRecipe/GalleryStep/thanh-pham-273.jpg"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Trà Đào Cam Sả</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">28.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Dặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd"
+                            src="https://cdn.dayphache.edu.vn/wp-content/uploads/2019/09/cach-nau-tra-sen-vang-long-nhan.jpg"
+                            alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Trà Sen Vàng</h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">39.000đ</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Dặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-product">
+                    <div class="img-product">
+                        <img class="img-prd" src="https://quangon.vn/resources/2020/04/18/sua-chua-xoai-1.jpg" alt="">
+                    </div>
+                    <div class="content-product">
+                        <h3 class="content-product-h3">Xoài Xay Sữa Chua </h3>
+                        <div class="content-product-deltals">
+                            <div class="price">
+                                <span class="money">28.000</span>
+                            </div>
+                            <button type="button" class="btn btn-cart">Đặt Mua</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer-box" id="about">
+                <h2>VỀ CHÚNG TÔI</h2>
+                <ul>
+                    <li>
+                        <p>An CaFe® được sinh ra từ niềm đam mê bất tận với hạt cà phê Việt Nam. Qua một chặng đường
+                            dài, chúng tôi đã không ngừng mang đến những sản phẩm cà phê thơm ngon, sánh đượm trong
+                            không gian thoải mái và lịch sự với mức giá hợp lý. Những ly cà phê của chúng tôi không chỉ
+                            đơn thuần là thức uống quen thuộc mà còn mang trên mình một sứ mệnh văn hóa phản ánh một
+                            phần nếp sống hiện đại của người Việt Nam.</p>
+                        <p>Chúng tôi mong muốn mang đến cho bạn những trải nghiệm đáng nhớ mỗi lần đến An CaFe®. Hãy
+                            chia sẻ với chúng tôi để chúng tôi có thể mang đến cho bạn những trải nghiệm tuyệt vời hơn
+                            thế.</p>
+                    </li>
+                    <li>
+                        <button class="contact">Liên Hệ Ngay</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h2>THÔNG TIN LIÊN HỆ</h2>
+                <ul>
+                    <li>
+                        <div class="icon">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        Đền Đô - Tp.Từ Sơn - Bắc Ninh
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <ion-icon name="call-outline"></ion-icon>
+                        </div>
+                        0395968885
+                    </li>
+                    <li>
+                        <div class="icon">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+                        nguyenhoang24091995@gmail.com
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-box">
+                <h2>ĐĂNG KÝ</h2>
+                <ul>
+                    <li>
+                        <form action="">
+                            <input type="text" placeholder="Nhập Email" id="email">
+                            <li><a href="dangky.html"><button> Nhận Thông Báo</button></a></li>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="giohang.js"></script>
+</body>
+<script src="giohang.js"></script>
+
+</html>

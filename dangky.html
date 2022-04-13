@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dangky.css">
+    <link rel="stylesheet" href="dangnhap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="dangnhap.html">
+
+    <title>Đăng Ký An CaFe</title>
+</head>
+
+<body>
+    <center>
+        <div id="login2">
+        <h1>Đăng Ký để tận hưởng nhiều hơn cùng AnCafe </h1>
+        <h4><label>Tên đăng nhập</label></h4>
+        <input type="text" placeholder="Điền tên đăng nhập" id="name"> <br>
+        <h4><label>Mật khẩu</label></h4>
+        <input type="password" placeholder="******" id="password"> <br>
+        <h4><label>Nhập lại mật khẩu</label></h4>
+        <input type="password" placeholder="******" id="password1"> <br>
+        <h4><label>Số điện thoại</label></h4>
+        <input type="number" placeholder="xxxxxxx" id="tell"> <br>
+        <h4><label>Email</label></h4>
+        <input type="email" placeholder="@gmai.com"> <br><br>
+        
+        <button onclick="Dangki1()">Đăng ký</button>
+        </div>
+</center>
+    <script>
+        class Account {
+            username;
+            password;
+
+            constructor(u, p) {
+                this.username = u;
+                this.password = p;
+            }
+        }
+
+        let arr = [];
+        let usn = document.getElementById('name');
+        let mk = document.getElementById('password');
+        let rmk = document.getElementById('password1');
+
+        function Dangki1() {
+            let u = usn.value;
+            let p = mk.value;
+            let rp = rmk.value;
+            if (p == rp) {
+                let acc = new Account(u, p);
+                arr.push(acc);
+                localStorage.setItem('Listacc', JSON.stringify(arr));
+                alert("Bạn đã đăng ký thành công ");
+                window.location = 'dangnhap.html';
+            } else if (p != rp) {
+                alert("Bạn cần nhập mật khẩu và nhập lại giống nhau ")
+            }
+
+        }
+    </script>
+
+</body>
+<script>
+    function start(){
+        onclick(location.href="dangnhap.html");
+    }
+</script>
+
+</html>
